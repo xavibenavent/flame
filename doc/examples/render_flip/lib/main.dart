@@ -1,4 +1,4 @@
-import 'package:flame/animation.dart' as flame_animation;
+import 'package:flame/sprite_animation.dart' as flame_animation;
 import 'package:flame/components/animation_component.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
@@ -12,11 +12,11 @@ void main() async {
 }
 
 class MyGame extends BaseGame {
-  final animation = flame_animation.Animation.sequenced('chopper.png', 4,
+  final animation = flame_animation.SpriteAnimation.sequenced('chopper.png', 4,
       textureWidth: 48, textureHeight: 48, stepTime: 0.15);
 
-  AnimationComponent buildAnimation() {
-    final ac = AnimationComponent(100, 100, animation);
+  SpriteAnimationComponent buildAnimation() {
+    final ac = SpriteAnimationComponent(100, 100, animation);
     ac.x = size.width / 2 - ac.width / 2;
     return ac;
   }

@@ -1,22 +1,22 @@
 import 'dart:ui';
 
 import 'component.dart';
-import 'package:flame/animation.dart';
+import 'package:flame/sprite_animation.dart';
 
-class AnimationComponent extends PositionComponent {
-  Animation animation;
+class SpriteAnimationComponent extends PositionComponent {
+  SpriteAnimation animation;
   Paint overridePaint;
   bool destroyOnFinish = false;
 
-  AnimationComponent(double width, double height, this.animation,
+  SpriteAnimationComponent(double width, double height, this.animation,
       {this.destroyOnFinish = false}) {
     this.width = width;
     this.height = height;
   }
 
-  AnimationComponent.empty();
+  SpriteAnimationComponent.empty();
 
-  AnimationComponent.sequenced(
+  SpriteAnimationComponent.sequenced(
     double width,
     double height,
     String imagePath,
@@ -32,7 +32,7 @@ class AnimationComponent extends PositionComponent {
   }) {
     this.width = width;
     this.height = height;
-    animation = Animation.sequenced(
+    animation = SpriteAnimation.sequenced(
       imagePath,
       amount,
       amountPerRow: amountPerRow,
@@ -54,8 +54,12 @@ class AnimationComponent extends PositionComponent {
   @override
   void render(Canvas canvas) {
     prepareCanvas(canvas);
-    animation.getSprite().render(canvas,
-        width: width, height: height, overridePaint: overridePaint);
+    animation.getSprite().render(
+          canvas,
+          width: width,
+          height: height,
+          overridePaint: overridePaint,
+        );
   }
 
   @override
