@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## [next]
+- Rename Animation to SpriteAnimation
 
 ## 0.24.0
  - Outsourcing SVG support to an external package
