@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flame/flame.dart';
-import 'package:flame/sprite_animation.dart;
+import 'package:flame/sprite_animation.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame/spritesheet.dart';
 import 'package:flame/position.dart';

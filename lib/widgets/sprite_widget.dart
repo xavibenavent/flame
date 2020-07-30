@@ -7,12 +7,10 @@ import 'dart:math';
 import '../sprite.dart';
 import '../anchor.dart';
 
-
 /// A [StatefulWidget] that renders a still [Sprite].
 ///
 /// To render an animation, use [SpriteAnimationWidget].
 class SpriteWidget extends StatelessWidget {
-
   /// The [Sprite] to be rendered
   final Sprite sprite;
 
